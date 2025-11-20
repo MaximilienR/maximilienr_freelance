@@ -3,6 +3,7 @@
 // Default export a React component
 
 import React, { useState } from "react";
+import logoImg from "../../assets/logo.png";
 
 export type NavLink = {
   name: string;
@@ -11,13 +12,13 @@ export type NavLink = {
 };
 
 type NavbarProps = {
-  logo?: string;
+  logoSrc?: string;
   links?: NavLink[];
   className?: string;
 };
 
 export default function Navbar({
-  logo = "MonLogo",
+  logoSrc = logoImg,
   links,
   className = "",
 }: NavbarProps) {
@@ -26,22 +27,20 @@ export default function Navbar({
   const navLinks: NavLink[] =
     links ?? [
       { name: "Accueil", href: "#" },
-      { name: "Fonctionnalités", href: "#features" },
-      { name: "Prix", href: "#pricing" },
-      { name: "À propos", href: "#about" },
+      { name: "Projet", href: "#features" },
+      { name: "Tarif", href: "#pricing" },
+      { name: "Contact", href: "#about" },
     ];
 
   return (
-    <header className={`bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50 ${className}`}>
+    <header className={`bg-slate-50 backdrop-blur-md shadow-sm sticky top-0 z-50 ${className}`}>
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center gap-4">
             <a href="#" className="flex items-center gap-2">
-              <span className="inline-flex items-center justify-center w-10 h-10 rounded-md bg-gradient-to-br from-indigo-500 to-violet-500 text-white font-bold">
-                {logo.charAt(0)}
-              </span>
-              <span className="font-semibold text-lg text-slate-800">{logo}</span>
+              <img src={logoSrc} alt="logo" className="w-10 h-10 object-contain select-none" />
+              <span className="text-xl font-semibold text-slate-900">'Freelance</span>
             </a>
           </div>
 
@@ -62,20 +61,7 @@ export default function Navbar({
               ))}
             </ul>
 
-            <div className="flex items-center gap-3">
-              <a
-                href="#login"
-                className="px-3 py-1.5 rounded-md text-sm text-slate-600 hover:bg-slate-100"
-              >
-                Connexion
-              </a>
-              <a
-                href="#signup"
-                className="inline-flex items-center px-4 py-2 rounded-md bg-indigo-600 text-white text-sm font-medium shadow-sm hover:bg-indigo-700"
-              >
-                S'inscrire
-              </a>
-            </div>
+             
           </div>
 
           {/* Mobile menu button */}
@@ -133,30 +119,11 @@ export default function Navbar({
               ))}
             </ul>
 
-            <div className="mt-3 flex items-center gap-3 px-3">
-              <a href="#login" className="px-3 py-2 rounded-md text-sm text-slate-600 hover:bg-slate-100">
-                Connexion
-              </a>
-              <a href="#signup" className="flex-1 inline-flex items-center justify-center px-4 py-2 rounded-md bg-indigo-600 text-white text-sm font-medium hover:bg-indigo-700">
-                S'inscrire
-              </a>
-            </div>
+           
           </div>
         )}
       </nav>
     </header>
   );
 }
-
-/*
-Usage (TypeScript):
-- Place this file in your project: src/components/Navbar.tsx
-- Ensure Tailwind CSS is configured (via Vite/CRA/Next.js)
-- Import and use: `import Navbar from "@/components/Navbar";` then <Navbar logo="Nom" />
-- Pass typed links: `links={[{ name: 'Blog', href: '/blog' }, { name: 'Docs', href: 'https://...', external: true }]}`
-
-Options I can do next (je peux appliquer directement):
-- Adapter pour Next.js en remplaçant `<a>` par `next/link` et typer `href` avec UrlObject si tu veux.
-- Ajouter un dropdown multi-niveaux (avec types TS).
-- Remplacer le logo texte par un `logoSrc?: string` prop et <img>.
-*/
+ 
