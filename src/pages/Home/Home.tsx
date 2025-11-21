@@ -4,7 +4,6 @@ import React from "react";
 export default function Home(): JSX.Element {
   return (
     <div className="relative min-h-screen overflow-hidden bg-slate-50 text-slate-900">
- 
       {/* --- Main content --- */}
       <main className="relative z-10 max-w-6xl px-6 py-20 mx-auto">
         <header className="mb-12">
@@ -39,18 +38,8 @@ export default function Home(): JSX.Element {
             </ul>
 
             <div className="flex gap-3 mt-6">
-              <a
-                className="inline-block px-4 py-2 font-medium text-white bg-indigo-600 rounded-md shadow hover:bg-indigo-700"
-                href="#contact"
-              >
-                Me contacter
-              </a>
-              <a
-                className="inline-block px-4 py-2 border rounded-md border-slate-200 text-slate-800 hover:bg-slate-50"
-                href="#cv"
-              >
-                Voir CV
-              </a>
+              <a className="inline-block px-4 py-2 font-medium text-white bg-indigo-600 rounded-md shadow hover:bg-indigo-700" href="#contact">Me contacter</a>
+              <a className="inline-block px-4 py-2 border rounded-md border-slate-200 text-slate-800 hover:bg-slate-50" href="#cv">Voir CV</a>
             </div>
           </article>
 
@@ -61,18 +50,18 @@ export default function Home(): JSX.Element {
               Découvrez des projets sur-mesure : vitrines, marketplaces, outils internes, APIs et apps mobiles.
             </p>
 
-            {/* --- Roue tournante MERN --- */}
-            <div className="relative flex items-center justify-center w-40 h-40 mx-auto mt-6 animate-spin-slow">
-              <div className="absolute text-lg font-semibold" style={{ transform: "rotate(0deg) translate(60px) rotate(0deg)" }}>Mongo</div>
-              <div className="absolute text-lg font-semibold" style={{ transform: "rotate(90deg) translate(60px) rotate(-90deg)" }}>Express</div>
-              <div className="absolute text-lg font-semibold" style={{ transform: "rotate(180deg) translate(60px) rotate(-180deg)" }}>React</div>
-              <div className="absolute text-lg font-semibold" style={{ transform: "rotate(270deg) translate(60px) rotate(-270deg)" }}>Node</div>
+            {/* --- Roue tournante MERN avec images --- */}
+            <div className="relative flex items-center justify-center w-56 h-56 mx-auto mt-6 animate-spin-slow">
+              <img src="/src/assets/mongod.png" className="absolute w-12 h-12" style={{ transform: "rotate(0deg) translate(90px) rotate(0deg)" }} />
+              <img src="/src/assets/express.png" className="absolute w-12 h-12" style={{ transform: "rotate(60deg) translate(90px) rotate(-60deg)" }} />
+              <img src="/src/assets/react.png" className="absolute w-12 h-12" style={{ transform: "rotate(120deg) translate(90px) rotate(-120deg)" }} />
+              <img src="/src/assets/nodejs.png" className="absolute w-12 h-12" style={{ transform: "rotate(180deg) translate(90px) rotate(-180deg)" }} />
+              <img src="/src/assets/css.jpg" className="absolute w-12 h-12" style={{ transform: "rotate(240deg) translate(90px) rotate(-240deg)" }} />
+              <img src="/src/assets/electron.png" className="absolute w-12 h-12" style={{ transform: "rotate(300deg) translate(90px) rotate(-300deg)" }} />
             </div>
           </aside>
         </section>
       </main>
-
-      
     </div>
   );
 }
