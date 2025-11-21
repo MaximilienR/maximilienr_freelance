@@ -26,20 +26,20 @@ export default function Navbar({
 
   const navLinks: NavLink[] =
     links ?? [
-      { name: "Accueil", href: "#" },
-      { name: "Projet", href: "#features" },
+      { name: "Accueil", href: "" },
+      { name: "Projet", href: "projet" },
       { name: "Tarif", href: "#pricing" },
       { name: "Contact", href: "#about" },
     ];
 
   return (
     <header className={`bg-slate-50 backdrop-blur-md shadow-sm sticky top-0 z-50 ${className}`}>
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <nav className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center gap-4">
             <a href="#" className="flex items-center gap-2">
-              <img src={logoSrc} alt="logo" className="w-10 h-10 object-contain select-none" />
+              <img src={logoSrc} alt="logo" className="object-contain w-10 h-10 select-none" />
               <span className="text-xl font-semibold text-slate-900">'Freelance</span>
             </a>
           </div>
@@ -53,7 +53,7 @@ export default function Navbar({
                     href={link.href}
                     target={link.external ? "_blank" : undefined}
                     rel={link.external ? "noopener noreferrer" : undefined}
-                    className="text-slate-700 hover:text-slate-900 transition-colors"
+                    className="transition-colors text-slate-700 hover:text-slate-900"
                   >
                     {link.name}
                   </a>
@@ -74,7 +74,7 @@ export default function Navbar({
             >
               {/* hamburger / close icon */}
               <svg
-                className="h-6 w-6"
+                className="w-6 h-6"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -102,7 +102,7 @@ export default function Navbar({
 
         {/* Mobile panel */}
         {open && (
-          <div className="md:hidden mt-2 pb-4">
+          <div className="pb-4 mt-2 md:hidden">
             <ul className="space-y-2">
               {navLinks.map((link) => (
                 <li key={link.name}>
@@ -110,7 +110,7 @@ export default function Navbar({
                     href={link.href}
                     target={link.external ? "_blank" : undefined}
                     rel={link.external ? "noopener noreferrer" : undefined}
-                    className="block px-3 py-2 rounded-md text-base font-medium text-slate-700 hover:bg-slate-100"
+                    className="block px-3 py-2 text-base font-medium rounded-md text-slate-700 hover:bg-slate-100"
                     onClick={() => setOpen(false)}
                   >
                     {link.name}

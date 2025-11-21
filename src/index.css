@@ -3,7 +3,7 @@
 @theme {
   --color-transparent: transparent;
   --color-current: currentColor;
-  --color-white: #fffff;
+  --color-white: #ffffff;
   --color-purple: #3f3cbb;
   --color-midnight: #121063;
   --color-metal: #565584;
@@ -14,18 +14,21 @@
   --color-bubble-gum: #ff77e9;
   --color-bermuda: #78dcca;
 }
-
-@keyframes spin-slow {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@keyframes blink {
+ 10%, 100% { opacity: 0; }
+  10% { opacity: 1; }
 }
 
+
 @layer utilities {
-  .animate-spin-slow {
-    animation: spin-slow 12s linear infinite;
-  }
+  .animate-blink-1 { animation: blink 2s linear 0s infinite; }
+  .animate-blink-2 { animation: blink 2s linear 0.4s infinite; }
+  .animate-blink-3 { animation: blink 2s linear 0.8s infinite; }
+  .animate-blink-4 { animation: blink 2s linear 1.2s infinite; }
+  .animate-blink-5 { animation: blink 2s linear 1.6s infinite; }
+  .animate-blink-6 { animation: blink 2s linear 2s infinite; }
+  .animate-blink-7 { animation: blink 2s linear 2.4s infinite; }
+  .animate-blink-8 { animation: blink 2s linear 2.8s infinite; }
+  .animate-blink-9 { animation: blink 2s linear 3.2s infinite; }
+  .animate-blink-10 { animation: blink 2s linear 3.6s infinite; }
 }

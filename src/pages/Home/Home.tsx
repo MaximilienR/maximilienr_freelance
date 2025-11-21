@@ -47,18 +47,25 @@ export default function Home(): JSX.Element {
           <aside className="p-6 border shadow-sm rounded-2xl bg-gradient-to-br from-white/60 to-white/30 border-slate-100">
             <h3 className="mb-3 text-xl font-semibold">Mes outils </h3>
             <p className="leading-relaxed text-slate-700">
-              Découvrez des projets sur-mesure : vitrines, marketplaces, outils internes, APIs et apps mobiles.
+      A chaque projet son outil. J'utilise principalement le stack MERN (MongoDB, Express, React, Node.js) avec TypeScript pour
+      garantir robustesse et maintenabilité. Pour des applications desktop, j'intègre Electron. Pour le design et le
+      prototypage, j'utilise Figma et Tailwind CSS pour des interfaces modernes et réactives.
             </p>
 
             {/* --- Roue tournante MERN avec images --- */}
-            <div className="relative flex items-center justify-center w-56 h-56 mx-auto mt-6 animate-spin-slow">
-              <img src="/src/assets/mongod.png" className="absolute w-12 h-12" style={{ transform: "rotate(0deg) translate(90px) rotate(0deg)" }} />
-              <img src="/src/assets/express.png" className="absolute w-12 h-12" style={{ transform: "rotate(60deg) translate(90px) rotate(-60deg)" }} />
-              <img src="/src/assets/react.png" className="absolute w-12 h-12" style={{ transform: "rotate(120deg) translate(90px) rotate(-120deg)" }} />
-              <img src="/src/assets/nodejs.png" className="absolute w-12 h-12" style={{ transform: "rotate(180deg) translate(90px) rotate(-180deg)" }} />
-              <img src="/src/assets/css.jpg" className="absolute w-12 h-12" style={{ transform: "rotate(240deg) translate(90px) rotate(-240deg)" }} />
-              <img src="/src/assets/electron.png" className="absolute w-12 h-12" style={{ transform: "rotate(300deg) translate(90px) rotate(-300deg)" }} />
-            </div>
+       <div className="relative flex items-center justify-center w-56 h-56 mx-auto mt-6">
+  <img src="/src/assets/mongod.png" className="absolute w-12 h-12 animate-blink-1" style={{ transform: "rotate(0deg) translate(90px) rotate(-0deg)" }} />
+  <img src="/src/assets/mongod.png" className="absolute w-12 h-12 animate-blink-2" style={{ transform: "rotate(40deg) translate(90px) rotate(-40deg)" }} />
+  <img src="/src/assets/express.png" className="absolute w-12 h-12 animate-blink-3" style={{ transform: "rotate(80deg) translate(90px) rotate(-80deg)" }} />
+  <img src="/src/assets/react.png" className="absolute w-12 h-12 animate-blink-4" style={{ transform: "rotate(120deg) translate(90px) rotate(-120deg)" }} />
+  <img src="/src/assets/nodejs.png" className="absolute w-12 h-12 animate-blink-5" style={{ transform: "rotate(160deg) translate(90px) rotate(-160deg)" }} />
+  <img src="/src/assets/css.jpg" className="absolute w-12 h-12 animate-blink-6" style={{ transform: "rotate(200deg) translate(90px) rotate(-200deg)" }} />
+  <img src="/src/assets/ts.svg" className="absolute w-12 h-12 animate-blink-7" style={{ transform: "rotate(240deg) translate(90px) rotate(-240deg)" }} />
+  <img src="/src/assets/electron.png" className="absolute w-12 h-12 animate-blink-8" style={{ transform: "rotate(280deg) translate(90px) rotate(-280deg)" }} />
+  <img src="/src/assets/tw.png" className="absolute w-12 h-12 animate-blink-9" style={{ transform: "rotate(320deg) translate(90px) rotate(-320deg)" }} />
+  <img src="/src/assets/docker.png" className="absolute w-12 h-12 animate-blink-10" style={{ transform: "rotate(360deg) translate(90px) rotate(-360deg)" }} />
+</div>
+
           </aside>
         </section>
       </main>
