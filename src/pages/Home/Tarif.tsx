@@ -5,13 +5,16 @@ type ProjectType = "site" | "software" | "mobile";
 type Option = {
   label: string;
   price: number;
+  dynamic?: boolean; // pour option dépendante d'un nombre (ex: pages)
 };
 
 const optionsData: Record<ProjectType, Option[]> = {
   site: [
-    { label: "Site complet (charte graphique + BDD)", price: 1000 },
-    { label: "Développement", price: 1500 },
-    { label: "Mise en production", price: 500 },
+    { label: "Site statique", price: 200, dynamic: true }, // prix par page
+    { label: "Site dynamique (CMS)", price: 1500 },
+    { label: "Charte graphique", price: 500 },
+    { label: "Développement", price: 1000 },
+    { label: "Mise en production", price: 300 },
   ],
   software: [
     { label: "Logiciel complet", price: 2000 },
@@ -28,10 +31,12 @@ const optionsData: Record<ProjectType, Option[]> = {
 const DynamicForm: React.FC = () => {
   const [projectType, setProjectType] = useState<ProjectType | "">("");
   const [selectedOptions, setSelectedOptions] = useState<string[]>([]);
+  const [pages, setPages] = useState<number>(1);
 
   const handleTypeChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setProjectType(e.target.value as ProjectType);
-    setSelectedOptions([]); // réinitialiser les options quand on change le type
+    setSelectedOptions([]);
+    setPages(1);
   };
 
   const handleOptionChange = (optionLabel: string) => {
@@ -46,7 +51,9 @@ const DynamicForm: React.FC = () => {
     if (!projectType) return 0;
     return selectedOptions.reduce((total, label) => {
       const option = optionsData[projectType].find((o) => o.label === label);
-      return total + (option ? option.price : 0);
+      if (!option) return total;
+      if (option.dynamic) return total + option.price * pages; // site statique
+      return total + option.price;
     }, 0);
   };
 
@@ -56,10 +63,17 @@ const DynamicForm: React.FC = () => {
         <h1 className="mb-6 text-2xl font-bold text-center text-sky-900">
           Estimation de projet
         </h1>
-        <p> Vous avez un besoin, Nous avons la solution, complétez le formulaire ci-dessous pour obtenir une estimation de votre projet</p>
+        <p>
+          Complétez le formulaire pour obtenir une estimation de votre projet.
+          Vous pouvez combiner les options comme vous le souhaitez.
+        </p>
+
         {/* Choix du type de projet */}
         <div>
-          <label htmlFor="projectType" className="block mb-2 font-medium text-gray-700">
+          <label
+            htmlFor="projectType"
+            className="block mb-2 font-medium text-gray-700"
+          >
             Type de projet
           </label>
           <select
@@ -80,15 +94,33 @@ const DynamicForm: React.FC = () => {
           <div className="space-y-3">
             <h2 className="font-semibold text-gray-800">Options disponibles :</h2>
             {optionsData[projectType].map((opt) => (
-              <label key={opt.label} className="flex items-center gap-2">
-                <input
-                  type="checkbox"
-                  checked={selectedOptions.includes(opt.label)}
-                  onChange={() => handleOptionChange(opt.label)}
-                  className="w-4 h-4 border-gray-300 rounded text-sky-600"
-                />
-                <span>{opt.label} (+{opt.price}€)</span>
-              </label>
+              <div key={opt.label}>
+                <label className="flex items-center gap-2">
+                  <input
+                    type="checkbox"
+                    checked={selectedOptions.includes(opt.label)}
+                    onChange={() => handleOptionChange(opt.label)}
+                    className="w-4 h-4 border-gray-300 rounded text-sky-600"
+                  />
+                  <span>
+                    {opt.label} {opt.dynamic ? `(+${opt.price}€/page)` : `(+${opt.price}€)`}
+                  </span>
+                </label>
+
+                {/* Input nombre de pages si option dynamique */}
+                {opt.dynamic && selectedOptions.includes(opt.label) && (
+                  <div className="flex items-center gap-2 mt-2 ml-6">
+                    <label className="text-gray-700">Nombre de pages :</label>
+                    <input
+                      type="number"
+                      min={1}
+                      value={pages}
+                      onChange={(e) => setPages(Number(e.target.value))}
+                      className="w-20 px-2 py-1 border rounded-md"
+                    />
+                  </div>
+                )}
+              </div>
             ))}
           </div>
         )}
