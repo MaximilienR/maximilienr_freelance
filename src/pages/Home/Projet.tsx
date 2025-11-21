@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import entrepriseImg from '../../assets/entreprise.jpg'; // ajuste le chemin si nécessaire
 import max from '../../assets/max .png'
 import bucket from '../../assets/bucket.png'

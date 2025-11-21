@@ -2,7 +2,7 @@
 // React + Tailwind responsive navbar (TypeScript)
 // Default export a React component
 
-import React, { useState } from "react";
+import { useState } from "react";
 import logoImg from "../../assets/logo.png";
 
 export type NavLink = {

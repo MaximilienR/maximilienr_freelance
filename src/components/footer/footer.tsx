@@ -1,4 +1,3 @@
-import React from "react";
 import logoImg from "../../assets/logo.png";
 
 // Définition du type pour les liens du footer
