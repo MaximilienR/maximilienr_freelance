@@ -1,5 +1,5 @@
 import  { useState } from 'react';
-import max from '../../assets/max .png'
+import max from '../../assets/max.png'
 import bucket from '../../assets/bucket.png'
 import cinelounge from '../../assets/cine.png'
 import anaf from '../../assets/anaf.png'
