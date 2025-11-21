@@ -1,11 +1,12 @@
 {
   "compilerOptions": {
     "jsx": "react-jsx",
-    "module": "esnext",
-    "moduleResolution": "nodenext", 
-    "target": "es6",
+    "target": "ESNext",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
     "strict": true,
     "esModuleInterop": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "isolatedModules": true
   }
 }
