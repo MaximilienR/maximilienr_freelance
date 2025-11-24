@@ -24,8 +24,8 @@ export default function Navbar({
     links ?? [
       { name: "Accueil", href: "" },
       { name: "Projet", href: "projet" },
-      { name: "Tarif", href: "#pricing" },
-      { name: "Contact", href: "#about" },
+      { name: "Tarif", href: "tarif" },
+      { name: "Contact", href: "contact" },
     ];
 
   return (
