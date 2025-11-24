@@ -5,6 +5,7 @@ import bucket from '../../assets/bucket.png';
 import cinelounge from '../../assets/cine.png';
 import anaf from '../../assets/anaf.png';
 import hero from '../../assets/hero.png';
+import elec from '../../assets/electord.png';
 function Projet() {
     const products = [
         {
@@ -46,6 +47,14 @@ function Projet() {
             technologies: ['Figma', 'Java ', 'Android Studio', 'XML', 'Firebase'],
             externalLink: 'https://drive.google.com/file/d/1nrWSTTVofRNL5HHtRjoLx_4h3PermNHV/view?usp=sharing',
             image: hero,
+        },
+        {
+            id: 6,
+            name: 'electord',
+            description: 'Logiciel de bureau permettant la prise de notes et la gestion de fichiers.',
+            technologies: ['HTML', 'CSS', 'JS', 'Electron',  'Node.js', 'Express',],
+            externalLink: 'https://github.com/MaximilienR/Electrod',
+            image: elec,
         },
     ];
     const [selectedProduct, setSelectedProduct] = useState(null);

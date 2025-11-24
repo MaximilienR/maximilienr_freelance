@@ -55,6 +55,13 @@ function Projet() {
       externalLink: 'https://drive.google.com/file/d/1nrWSTTVofRNL5HHtRjoLx_4h3PermNHV/view?usp=sharing',
       image: hero,
     },
+    {
+      id: 6,
+      name: 'Projet à venir',
+      description: 'Description du projet à venir.',
+      technologies: ['Technologie1', 'Technologie2'],
+      externalLink: '#',
+    }
   ];
 
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
