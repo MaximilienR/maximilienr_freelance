@@ -1,0 +1,13 @@
+import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
+import { useState } from "react";
+import logoImg from "../../assets/logo.png";
+export default function Navbar({ logoSrc = logoImg, links, className = "", }) {
+    const [open, setOpen] = useState(false);
+    const navLinks = links ?? [
+        { name: "Accueil", href: "" },
+        { name: "Projet", href: "projet" },
+        { name: "Tarif", href: "#pricing" },
+        { name: "Contact", href: "#about" },
+    ];
+    return (_jsx("header", { className: `bg-slate-50 backdrop-blur-md shadow-sm sticky top-0 z-50 ${className}`, children: _jsxs("nav", { className: "px-4 mx-auto max-w-7xl sm:px-6 lg:px-8", children: [_jsxs("div", { className: "flex items-center justify-between h-16", children: [_jsx("div", { className: "flex items-center gap-4", children: _jsxs("a", { href: "#", className: "flex items-center gap-2", children: [_jsx("img", { src: logoSrc, alt: "logo", className: "object-contain w-10 h-10 select-none" }), _jsx("span", { className: "text-xl font-semibold text-slate-900", children: "'Freelance" })] }) }), _jsx("div", { className: "hidden md:flex md:items-center md:gap-6", children: _jsx("ul", { className: "flex items-center gap-6", children: navLinks.map((link) => (_jsx("li", { children: _jsx("a", { href: link.href, target: link.external ? "_blank" : undefined, rel: link.external ? "noopener noreferrer" : undefined, className: "transition-colors text-slate-700 hover:text-slate-900", children: link.name }) }, link.name))) }) }), _jsx("div", { className: "md:hidden", children: _jsx("button", { onClick: () => setOpen((s) => !s), "aria-expanded": open, "aria-label": "Menu", className: "inline-flex items-center justify-center p-2 rounded-md text-slate-700 hover:bg-slate-100", children: _jsx("svg", { className: "w-6 h-6", fill: "none", viewBox: "0 0 24 24", stroke: "currentColor", "aria-hidden": "true", children: open ? (_jsx("path", { strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: 2, d: "M6 18L18 6M6 6l12 12" })) : (_jsx("path", { strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: 2, d: "M4 6h16M4 12h16M4 18h16" })) }) }) })] }), open && (_jsx("div", { className: "pb-4 mt-2 md:hidden", children: _jsx("ul", { className: "space-y-2", children: navLinks.map((link) => (_jsx("li", { children: _jsx("a", { href: link.href, target: link.external ? "_blank" : undefined, rel: link.external ? "noopener noreferrer" : undefined, className: "block px-3 py-2 text-base font-medium rounded-md text-slate-700 hover:bg-slate-100", onClick: () => setOpen(false), children: link.name }) }, link.name))) }) }))] }) }));
+}

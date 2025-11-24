@@ -1,7 +1,3 @@
-// Navbar.tsx
-// React + Tailwind responsive navbar (TypeScript)
-// Default export a React component
-
 import { useState } from "react";
 import logoImg from "../../assets/logo.png";
 
