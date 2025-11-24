@@ -1,4 +1,13 @@
-// src/pages/Home.tsx
+ 
+import mongoImg from "../assets/mongod.png";
+import expressImg from "../assets/express.png";
+import reactImg from "../assets/react.png";
+import nodeImg from "../assets/nodejs.png";
+import cssImg from "../assets/css.jpg";
+import tsImg from "../assets/ts.svg";
+import electronImg from "../assets/electron.png";
+import twImg from "../assets/tw.png";
+import dockerImg from "../assets/docker.png";
 
 export default function Home(): JSX.Element {
   return (
@@ -52,17 +61,17 @@ export default function Home(): JSX.Element {
             </p>
 
             {/* --- Roue tournante MERN avec images --- */}
-       <div className="relative flex items-center justify-center w-56 h-56 mx-auto mt-6">
-  <img src="/src/assets/mongod.png" className="absolute w-12 h-12 animate-blink-1" style={{ transform: "rotate(0deg) translate(90px) rotate(-0deg)" }} />
-  <img src="/src/assets/mongod.png" className="absolute w-12 h-12 animate-blink-2" style={{ transform: "rotate(40deg) translate(90px) rotate(-40deg)" }} />
-  <img src="/src/assets/express.png" className="absolute w-12 h-12 animate-blink-3" style={{ transform: "rotate(80deg) translate(90px) rotate(-80deg)" }} />
-  <img src="/src/assets/react.png" className="absolute w-12 h-12 animate-blink-4" style={{ transform: "rotate(120deg) translate(90px) rotate(-120deg)" }} />
-  <img src="/src/assets/nodejs.png" className="absolute w-12 h-12 animate-blink-5" style={{ transform: "rotate(160deg) translate(90px) rotate(-160deg)" }} />
-  <img src="/src/assets/css.jpg" className="absolute w-12 h-12 animate-blink-6" style={{ transform: "rotate(200deg) translate(90px) rotate(-200deg)" }} />
-  <img src="/src/assets/ts.svg" className="absolute w-12 h-12 animate-blink-7" style={{ transform: "rotate(240deg) translate(90px) rotate(-240deg)" }} />
-  <img src="/src/assets/electron.png" className="absolute w-12 h-12 animate-blink-8" style={{ transform: "rotate(280deg) translate(90px) rotate(-280deg)" }} />
-  <img src="/src/assets/tw.png" className="absolute w-12 h-12 animate-blink-9" style={{ transform: "rotate(320deg) translate(90px) rotate(-320deg)" }} />
-  <img src="/src/assets/docker.png" className="absolute w-12 h-12 animate-blink-10" style={{ transform: "rotate(360deg) translate(90px) rotate(-360deg)" }} />
+ <div className="relative flex items-center justify-center w-56 h-56 mx-auto mt-6">
+  <img src={mongoImg} className="absolute w-12 h-12 animate-blink-1" style={{ transform: "rotate(0deg) translate(90px) rotate(-0deg)" }} />
+  <img src={mongoImg} className="absolute w-12 h-12 animate-blink-2" style={{ transform: "rotate(40deg) translate(90px) rotate(-40deg)" }} />
+  <img src={expressImg} className="absolute w-12 h-12 animate-blink-3" style={{ transform: "rotate(80deg) translate(90px) rotate(-80deg)" }} />
+  <img src={reactImg} className="absolute w-12 h-12 animate-blink-4" style={{ transform: "rotate(120deg) translate(90px) rotate(-120deg)" }} />
+  <img src={nodeImg} className="absolute w-12 h-12 animate-blink-5" style={{ transform: "rotate(160deg) translate(90px) rotate(-160deg)" }} />
+  <img src={cssImg} className="absolute w-12 h-12 animate-blink-6" style={{ transform: "rotate(200deg) translate(90px) rotate(-200deg)" }} />
+  <img src={tsImg} className="absolute w-12 h-12 animate-blink-7" style={{ transform: "rotate(240deg) translate(90px) rotate(-240deg)" }} />
+  <img src={electronImg} className="absolute w-12 h-12 animate-blink-8" style={{ transform: "rotate(280deg) translate(90px) rotate(-280deg)" }} />
+  <img src={twImg} className="absolute w-12 h-12 animate-blink-9" style={{ transform: "rotate(320deg) translate(90px) rotate(-320deg)" }} />
+  <img src={dockerImg} className="absolute w-12 h-12 animate-blink-10" style={{ transform: "rotate(360deg) translate(90px) rotate(-360deg)" }} />
 </div>
 
           </aside>
