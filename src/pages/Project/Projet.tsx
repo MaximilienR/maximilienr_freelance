@@ -1,17 +1,18 @@
-import  { useState } from 'react';
-import max from '../../assets/max.png'
-import bucket from '../../assets/bucket.png'
-import cinelounge from '../../assets/cine.png'
-import anaf from '../../assets/anaf.png'
-import hero from '../../assets/hero.png'
-import elec from '../../assets/electord.png'
+import { useState } from 'react';
+import max from '../../assets/max.png';
+import bucket from '../../assets/bucket.png';
+import cinelounge from '../../assets/cine.png';
+import anaf from '../../assets/anaf.png';
+import hero from '../../assets/hero.png';
+import elec from '../../assets/electord.png';
+
 type Product = {
   id: number;
   name: string;
   description: string;
   technologies: string[];
   externalLink: string;
-  image?: string; // image spécifique au projet
+  image?: string;
 };
 
 function Projet() {
@@ -27,14 +28,14 @@ function Projet() {
     {
       id: 2,
       name: 'BucketList',
-      description: '. Fonctionnalités de base (essentielles) Gestion de Bucket List ➔ Ajouter, modifier, supprimer des objectifs facilement. Dates & rappels intelligents ➔ Notifications motivantes pour réaliser les objectifs à temps. Album souvenirs ➔ Intégration de photos et vidéos des réalisations. Statistiques visuelles ➔ Graphiques pour suivre l’évolution ',
-      technologies: ['Figma', 'HTML', 'CSS', 'JS', 'React ', 'TailwindCSS', 'Node.js', 'Express', 'MongoDB'],
+      description: 'Fonctionnalités essentielles : ajouter, modifier, supprimer des objectifs, notifications et album souvenirs.',
+      technologies: ['Figma', 'HTML', 'CSS', 'JS', 'React', 'TailwindCSS', 'Node.js', 'Express', 'MongoDB'],
       externalLink: 'https://bucketlist-ooan.onrender.com/',
       image: bucket,
     },
     {
       id: 3,
-      name: 'cinelounge',
+      name: 'Cinelounge',
       description: 'Plateforme de streaming de films et séries avec recommandations personnalisées et interface conviviale.',
       technologies: ['HTML', 'CSS', 'JS', 'React', 'TailwindCSS', 'Node.js', 'Express', 'MongoDB'],
       externalLink: 'https://drive.google.com/file/d/1UpbeDvUANkv1RARs4WXp4WZb8xeih0Va/view?usp=sharing',
@@ -42,29 +43,28 @@ function Projet() {
     },
     {
       id: 4,
-      name: 'anaf',
-      description: 'refonte totale de site de l entreprise en proposant une nouvelle charte graphique et mettre en avant leurs services.',
-      technologies: ['Figma','HTML', 'CSS', 'JS', 'React', 'Bootstrap', 'Php', 'Symfony', ],
-      externalLink: 'https://drive.google.com/file/d/1t_drN3BY71eTdI9qC7mCHAaG58bQJGDT/view?usp=sharing/',
+      name: 'ANAF',
+      description: 'Refonte totale du site de l’entreprise avec une nouvelle charte graphique et mise en avant des services.',
+      technologies: ['Figma', 'HTML', 'CSS', 'JS', 'React', 'Bootstrap', 'PHP', 'Symfony'],
+      externalLink: 'https://drive.google.com/file/d/1t_drN3BY71eTdI9qC7mCHAaG58bQJGDT/view?usp=sharing',
       image: anaf,
     },
     {
       id: 5,
       name: 'Hero',
-      description: 'Ce site est destiné à la commercialisation d’articles sous licence de vêtements et accessoires pour enfants : ',
-      technologies: ['Figma','Java ','Android Studio','XML','Firebase'],
+      description: 'Site de commercialisation d’articles sous licence de vêtements et accessoires pour enfants.',
+      technologies: ['Figma', 'Java', 'Android Studio', 'XML', 'Firebase'],
       externalLink: 'https://drive.google.com/file/d/1nrWSTTVofRNL5HHtRjoLx_4h3PermNHV/view?usp=sharing',
       image: hero,
     },
     {
       id: 6,
       name: 'Electrod',
-      description: 'Logiciel de bureau permettant la prise de notes et la gestion de fichiers.',
-      technologies: ['HTML', 'CSS', 'JS', 'Electron',  'Node.js'],
-      externalLink: '#',
+      description: 'Logiciel de bureau pour la prise de notes et la gestion de fichiers.',
+      technologies: ['HTML', 'CSS', 'JS', 'Electron', 'Node.js'],
+      externalLink: 'https://github.com/MaximilienR/Electrod',
       image: elec,
-
-    }
+    },
   ];
 
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
@@ -73,10 +73,10 @@ function Projet() {
   const closeModal = () => setSelectedProduct(null);
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen p-6 bg-slate-50">
-      <h1 className="mb-8 text-4xl font-bold text-slate-900">Nos réalisations phare </h1>
+    <div className="flex flex-col items-center mt-4 p-4py-min-h-screen bg-slate-50">
+      <h1 className="mb-8 text-4xl font-bold text-sky-900">Nos réalisations phares</h1>
 
-      <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
         {products.map((product) => (
           <div
             key={product.id}
@@ -94,11 +94,9 @@ function Projet() {
         ))}
       </div>
 
-      {/* Modal */}
       {selectedProduct && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
           <div className="bg-white w-[90%] max-w-3xl p-6 rounded-xl shadow-lg relative flex flex-col md:flex-row gap-6">
-            {/* Image */}
             {selectedProduct.image && (
               <img
                 src={selectedProduct.image}
@@ -107,7 +105,6 @@ function Projet() {
               />
             )}
 
-            {/* Contenu */}
             <div className="flex flex-col justify-between flex-1">
               <div>
                 <button
