@@ -4,6 +4,7 @@ import bucket from '../../assets/bucket.png'
 import cinelounge from '../../assets/cine.png'
 import anaf from '../../assets/anaf.png'
 import hero from '../../assets/hero.png'
+import elec from '../../assets/electord.png'
 type Product = {
   id: number;
   name: string;
@@ -57,10 +58,12 @@ function Projet() {
     },
     {
       id: 6,
-      name: 'Projet à venir',
-      description: 'Description du projet à venir.',
-      technologies: ['Technologie1', 'Technologie2'],
+      name: 'Electrod',
+      description: 'Logiciel de bureau permettant la prise de notes et la gestion de fichiers.',
+      technologies: ['HTML', 'CSS', 'JS', 'Electron',  'Node.js'],
       externalLink: '#',
+      image: elec,
+
     }
   ];
 

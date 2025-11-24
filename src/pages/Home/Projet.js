@@ -52,7 +52,7 @@ function Projet() {
             id: 6,
             name: 'electord',
             description: 'Logiciel de bureau permettant la prise de notes et la gestion de fichiers.',
-            technologies: ['HTML', 'CSS', 'JS', 'Electron',  'Node.js', 'Express',],
+            technologies: ['HTML', 'CSS', 'JS', 'Electron',  'Node.js'],
             externalLink: 'https://github.com/MaximilienR/Electrod',
             image: elec,
         },
