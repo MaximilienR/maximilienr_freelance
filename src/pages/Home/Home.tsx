@@ -1,13 +1,13 @@
  
-import mongoImg from "../assets/mongod.png";
-import expressImg from "../assets/express.png";
-import reactImg from "../assets/react.png";
-import nodeImg from "../assets/nodejs.png";
-import cssImg from "../assets/css.jpg";
-import tsImg from "../assets/ts.svg";
+import mongoImg from "../../assets/mongod.png";
+import expressImg from "../../assets/express.png";
+import reactImg from "../../assets/react.png";
+import nodeImg from "../../assets/nodejs.png";
+import cssImg from "../../assets/css.jpg";
+import tsImg from "../../assets/ts.svg";
 import electronImg from "../assets/electron.png";
-import twImg from "../assets/tw.png";
-import dockerImg from "../assets/docker.png";
+import twImg from "../../assets/tw.png";
+import dockerImg from "../../assets/docker.png";
 
 export default function Home(): JSX.Element {
   return (
