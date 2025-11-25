@@ -55,7 +55,7 @@ const Footer: React.FC<FooterProps> = ({
                   href={link.href}
                   target={link.external ? "_blank" : undefined}
                   rel={link.external ? "noopener noreferrer" : undefined}
-                  className="text-white transition-colors hover:text-gray-300"
+                  className="text-black transition-colors hover:text-gray-300"
                 >
                   {link.name}
                 </a>
