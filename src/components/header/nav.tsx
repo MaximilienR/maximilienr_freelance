@@ -52,14 +52,14 @@ export default function Navbar({
                       href={link.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="transition-colors text-slate-700 hover:text-slate-900"
+                      className="transition-colors text-slate-700 hover:text-blue-300"
                     >
                       {link.name}
                     </a>
                   ) : (
                     <Link
                       to={link.href}
-                      className="transition-colors text-slate-700 hover:text-slate-900"
+                      className="transition-colors text-slate-700 hover:text-blue-300"
                     >
                       {link.name}
                     </Link>
