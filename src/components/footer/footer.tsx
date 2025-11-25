@@ -42,7 +42,7 @@ const Footer: React.FC<FooterProps> = ({
               alt="logo"
               className="object-contain w-10 h-10"
             />
-            <span className="text-xl font-semibold text-white select-none">
+            <span className="text-xl font-semibold text-black select-none">
               Freelance
             </span>
           </div>
