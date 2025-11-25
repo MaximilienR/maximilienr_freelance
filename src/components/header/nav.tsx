@@ -29,7 +29,7 @@ export default function Navbar({
     ];
 
   return (
-    <header className={`bg-slate-50 backdrop-blur-md shadow-sm sticky top-0 z-50 ${className}  transition-colors hover:text-blue-300"`}>
+    <header className="transition-colors text-slate-700 hover:text-slate-900">
 
       <nav className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
