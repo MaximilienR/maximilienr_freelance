@@ -30,7 +30,7 @@ const Footer: React.FC<FooterProps> = ({
 
   return (
     <footer
-      className={`bg-red-900 text-white border-t border-red-800 ${className}`}
+      className={`bg-blue-900 text-white border-t border-red-800 ${className}`}
     >
       <div className="px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="flex flex-col gap-8 md:flex-row md:justify-between md:items-center">
