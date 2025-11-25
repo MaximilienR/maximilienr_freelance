@@ -65,10 +65,10 @@ const Footer: React.FC<FooterProps> = ({
         </div>
 
         {/* Séparateur */}
-        <div className="my-8 border-t border-red-800" />
+        <div className="my-8 border-t border-gray-800" />
 
         {/* Copyright */}
-        <p className="text-sm text-center text-gray-300">
+        <p className="text-sm text-center transition-colors text-black-900 hover:text-gray-300">
           &copy; {new Date().getFullYear()} Freelance. Tous droits réservés.
         </p>
       </div>
