@@ -5,6 +5,7 @@ import Home from "./pages/Home/Home";
 import Projet from "./pages/Project/Projet";
 import Contact from "./pages/Contact/Contact";
 import Tarif from "./pages/Tarrif/Tarif";
+import Mention from "./pages/mention/mention";
 const router = createBrowserRouter([
     {
         path: "/",
@@ -14,6 +15,7 @@ const router = createBrowserRouter([
             { path: "projet", element: _jsx(Projet, {}) },
             { path: "contact", element: _jsx(Contact, {}) },
             { path: "tarif", element: _jsx(Tarif, {}) },
+            {path: "mention", element: _jsx(Mention, {})},
         ],
     },
 ]);
