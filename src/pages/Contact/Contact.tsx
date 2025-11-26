@@ -1,6 +1,7 @@
 import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
+import { sendContactForm } from "../../api/contact.api";
 
 const Contact: React.FC = () => {
   // --- Validation Yup ---
@@ -11,9 +12,16 @@ const Contact: React.FC = () => {
   });
 
   // --- Submit ---
-  const handleSubmit = (values: any) => {
-    console.log("Form soumis !", values);
-  };
+const handleSubmit = async (values: any) => {
+  const res = await sendContactForm(values);
+
+  if (res.success) {
+    alert("Message envoyé !");
+  } else {
+    alert("Erreur lors de l’envoi.");
+  }
+};
+
 
   return (
     <div className="pb-12">
