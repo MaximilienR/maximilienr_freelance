@@ -1,4 +1,4 @@
-declare module './pages/mention/mention' {
-  const Mention: any;
-  export default Mention;
+declare module "*.js" {
+  const value: any;
+  export default value;
 }
