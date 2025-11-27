@@ -1,0 +1,6 @@
+import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
+import { Link } from "react-router-dom";
+const Page404 = () => {
+    return (_jsxs("div", { className: "flex flex-col items-center justify-center min-h-screen px-4 bg-gray-50 sm:px-6 lg:px-8", children: [_jsxs("div", { className: "max-w-md text-center", children: [_jsx("h1", { className: "font-extrabold tracking-widest text-gray-200 text-9xl animate-bounce", children: "404" }), _jsx("p", { className: "mt-6 text-2xl font-semibold text-gray-700", children: "Oups ! Page introuvable" }), _jsx("p", { className: "mt-2 text-gray-500", children: "La page que vous cherchez n'existe pas, a \u00E9t\u00E9 d\u00E9plac\u00E9e ou est temporairement indisponible." }), _jsx(Link, { to: "/", className: "inline-block px-6 py-3 mt-6 font-medium text-white transition-colors duration-300 bg-blue-600 rounded-md shadow-md hover:bg-blue-700", children: "Retour \u00E0 l'accueil" })] }), _jsx("div", { className: "mt-10", children: _jsx("svg", { className: "w-64 h-64 mx-auto text-gray-300 animate-pulse", fill: "none", stroke: "currentColor", viewBox: "0 0 24 24", xmlns: "http://www.w3.org/2000/svg", children: _jsx("path", { strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: 1.5, d: "M12 9v2m0 4h.01M21 12c0 4.9706-4.0294 9-9 9s-9-4.0294-9-9 4.0294-9 9-9 9 4.0294 9 9z" }) }) })] }));
+};
+export default Page404;
