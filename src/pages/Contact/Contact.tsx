@@ -17,8 +17,8 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen pb-12 bg-gray-50">
-      <div className="w-full max-w-md p-8 space-y-6 text-center bg-white shadow rounded-2xl">
+    <div className="flex flex-col items-center justify-center min-h-screen pb-12 ">
+      <div className="w-full max-w-md p-8 space-y-6 text-center shadow bg-slate-100 rounded-2xl">
         <h1 className="text-3xl font-bold text-sky-900">Contactez-moi</h1>
         <p className="text-gray-600">
           Vous souhaitez prendre rendez-vous ou me joindre directement ?
