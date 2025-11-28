@@ -7,7 +7,9 @@
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "allowJs": true
+    "allowJs": true,
+    "rootDir": "src",     // ton dossier source
+    "outDir": "dist"      // dossier où TS va mettre les fichiers compilés
   },
   "include": ["src"]
 }
