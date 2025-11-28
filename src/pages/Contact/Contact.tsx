@@ -40,7 +40,7 @@ const handleSubmit = async (values: any) => {
           >
             {/* Titre */}
             <div>
-              <h1 className="text-2xl md:text-3xl font-bold text-center text-sky-900">
+              <h1 className="text-2xl font-bold text-center md:text-3xl text-sky-900">
                 Contactez-moi
               </h1>
               <p className="mt-2 text-center text-gray-600">
@@ -120,12 +120,7 @@ const handleSubmit = async (values: any) => {
             <div className="flex justify-center">
               <button
                 type="submit"
-                className="
-                  px-6 py-3 text-lg font-semibold text-white rounded-lg bg-sky-600
-                  hover:bg-sky-700 transition
-                  focus:ring-2 focus:ring-offset-2 focus:ring-sky-600
-                  w-full sm:w-auto
-                "
+                className="w-full px-6 py-3 text-lg font-semibold text-white transition rounded-lg bg-sky-600 hover:bg-sky-700 focus:ring-2 focus:ring-offset-2 focus:ring-sky-600 sm:w-auto"
               >
                 Envoyer
               </button>
@@ -133,6 +128,25 @@ const handleSubmit = async (values: any) => {
           </Form>
         )}
       </Formik>
+      <div className="mt-6 text-center">
+  <p className="mb-2 text-gray-700">
+    Vous préférez me joindre sur les réseaux sociaux ?{" "}
+    <button
+      type="button"
+      className="ml-1 font-semibold underline text-sky-600"
+      onClick={() => {
+        const url = import.meta.env.VITE_LINKEDIN_URL;
+        if (url) {
+          window.open(url, "_blank", "noopener,noreferrer");
+        } else {
+          alert("Lien LinkedIn non défini !");
+        }
+      }}
+    >
+      Cliquez ici
+    </button>
+  </p>
+</div>
     </div>
   );
 };
