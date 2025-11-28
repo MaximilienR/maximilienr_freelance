@@ -1,152 +1,59 @@
 import React from "react";
-import { Formik, Form, Field, ErrorMessage } from "formik";
-import * as Yup from "yup";
-import { sendContactForm } from "../../api/contact.api";
+import { FaLinkedin } from "react-icons/fa";
 
 const Contact: React.FC = () => {
-  // --- Validation Yup ---
-  const validationSchema = Yup.object({
-    email: Yup.string().email("Email invalide").required("Email requis"),
-    sujet: Yup.string().required("Sujet requis"),
-    message: Yup.string().required("Message requis").min(10, "Message trop court"),
-  });
+  const handleLinkedInClick = () => {
+    const url = import.meta.env.VITE_LINKEDIN_URL;
+    if (url) {
+      window.open(url, "_blank", "noopener,noreferrer");
+    } else {
+      alert("Lien LinkedIn non défini !");
+    }
+  };
 
-  // --- Submit ---
-const handleSubmit = async (values: any) => {
-  const res = await sendContactForm(values);
-
-  if (res.success) {
-    alert("Message envoyé !");
-  } else {
-    alert("Erreur lors de l’envoi.");
-  }
-};
-
+  const handleRdvClick = () => {
+    // Ouvre directement le lien Google Calendar (ou autre)
+    window.open("https://calendar.app.google/JHW1owNwSPLoQoNv9", "_blank", "noopener,noreferrer");
+  };
 
   return (
-    <div className="pb-12">
-      <Formik
-        initialValues={{ email: "", sujet: "", message: "" }}
-        validationSchema={validationSchema}
-        onSubmit={handleSubmit}
-      >
-        {() => (
-          <Form
-            className="
-              bg-white shadow rounded-2xl p-6 sm:p-8 mt-12 mx-auto space-y-6
-              w-full max-w-4xl
-              md:w-[48rem]
-            "
+    <div className="flex flex-col items-center justify-center min-h-screen pb-12 bg-gray-50">
+      <div className="w-full max-w-md p-8 space-y-6 text-center bg-white shadow rounded-2xl">
+        <h1 className="text-3xl font-bold text-sky-900">Contactez-moi</h1>
+        <p className="text-gray-600">
+          Vous souhaitez prendre rendez-vous ou me joindre directement ?
+        </p>
+
+        {/* Bouton prise de rendez-vous */}
+        <button
+          onClick={handleRdvClick}
+          className="w-full px-6 py-3 text-lg font-semibold text-white transition rounded-lg bg-sky-600 hover:bg-sky-700 focus:ring-2 focus:ring-offset-2 focus:ring-sky-600"
+        >
+          Prendre rendez-vous
+        </button>
+
+        {/* Bouton LinkedIn */}
+        <p className="text-gray-700">
+          Vous préférez me joindre sur les réseaux sociaux ?{" "}
+          <button
+            type="button"
+            className="ml-1 font-semibold underline text-sky-600"
+            onClick={handleLinkedInClick}
           >
-            {/* Titre */}
-            <div>
-              <h1 className="text-2xl font-bold text-center md:text-3xl text-sky-900">
-                Contactez-moi
-              </h1>
-              <p className="mt-2 text-center text-gray-600">
-                Remplissez le formulaire ci-dessous pour me contacter.
-              </p>
-            </div>
+            Cliquez ici
+          </button>
+        </p>
 
-            {/* Email */}
-            <div>
-              <label htmlFor="email" className="block mb-2 font-medium text-gray-700">
-                Email
-              </label>
-
-              <Field
-                type="email"
-                id="email"
-                name="email"
-                placeholder="votre.email@example.com"
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-600"
-              />
-
-              <ErrorMessage
-                name="email"
-                component="p"
-                className="mt-1 text-sm text-red-600"
-              />
-            </div>
-
-            {/* Sujet */}
-            <div>
-              <label htmlFor="sujet" className="block mb-2 font-medium text-gray-700">
-                Sujet
-              </label>
-
-              <Field
-                as="select"
-                id="sujet"
-                name="sujet"
-                className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-600"
-              >
-                <option value="">Sélectionnez un sujet</option>
-                <option value="formation">Formation</option>
-                <option value="creation">Création</option>
-                <option value="autre">Autre</option>
-              </Field>
-
-              <ErrorMessage
-                name="sujet"
-                component="p"
-                className="mt-1 text-sm text-red-600"
-              />
-            </div>
-
-            {/* Message */}
-            <div>
-              <label htmlFor="message" className="block mb-2 font-medium text-gray-700">
-                Message
-              </label>
-
-              <Field
-                as="textarea"
-                id="message"
-                name="message"
-                rows={8}
-                placeholder="Écrivez votre message ici..."
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-600"
-              />
-
-              <ErrorMessage
-                name="message"
-                component="p"
-                className="mt-1 text-sm text-red-600"
-              />
-            </div>
-
-            {/* Bouton */}
-            <div className="flex justify-center">
-              <button
-                type="submit"
-                className="w-full px-6 py-3 text-lg font-semibold text-white transition rounded-lg bg-sky-600 hover:bg-sky-700 focus:ring-2 focus:ring-offset-2 focus:ring-sky-600 sm:w-auto"
-              >
-                Envoyer
-              </button>
-            </div>
-          </Form>
-        )}
-      </Formik>
-      <div className="mt-6 text-center">
-  <p className="mb-2 text-gray-700">
-    Vous préférez me joindre sur les réseaux sociaux ?{" "}
-    <button
-      type="button"
-      className="ml-1 font-semibold underline text-sky-600"
-      onClick={() => {
-        const url = import.meta.env.VITE_LINKEDIN_URL;
-        if (url) {
-          window.open(url, "_blank", "noopener,noreferrer");
-        } else {
-          alert("Lien LinkedIn non défini !");
-        }
-      }}
-    >
-      Cliquez ici
-    </button>
-  </p>
-</div>
+        <div className="flex justify-center gap-4 mt-4 text-2xl text-sky-600">
+          <button
+            aria-label="LinkedIn"
+            onClick={handleLinkedInClick}
+            className="transition hover:text-sky-800"
+          >
+            <FaLinkedin />
+          </button>
+        </div>
+      </div>
     </div>
   );
 };
