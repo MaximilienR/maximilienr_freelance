@@ -12,7 +12,7 @@ const MentionsLegales: React.FC = () => {
             Le site <strong>Maximilienrfreelance </strong> est édité par <strong>Maximilien Roussel</strong>,  
             micro-entrepreneur, immatriculé au Répertoire SIRET sous le numéro <strong>[*]</strong>,  
             domicilié à <strong>[France metropolitaine]</strong>.  
-            Contact : <a href="mailto:maximilienrfreelance.com" className="text-blue-600 underline">contact@votresite.com</a>
+            Contact : <a href="mailto:maximilienrfreelance.com" className="text-blue-600 underline">mfreelance@contact.com</a>
           </p>
         </section>
 
@@ -26,7 +26,7 @@ const MentionsLegales: React.FC = () => {
         <section className="mb-6">
           <h2 className="mb-2 text-xl font-semibold text-gray-800">Hébergement</h2>
           <p className="leading-relaxed text-gray-700">
-            Le site est hébergé par <strong>Rendedr </strong>,  
+            Le site est hébergé par <strong>Netlify </strong>,  
             situé à [Adresse complète de l'hébergeur].  
             Téléphone : [Numéro de téléphone].
           </p>
