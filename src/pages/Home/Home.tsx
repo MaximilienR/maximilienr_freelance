@@ -18,10 +18,11 @@ export default function Home(): JSX.Element {
           <h1 className="text-4xl font-extrabold leading-tight sm:text-5xl">
             Développeur web & mobile — <span className="text-amber-500"><br/> transformons vos idées</span>
           </h1>
-          <p className="max-w-3xl mt-4 text-lg text-slate-600">
-            Vous recherchez un collaborateur capable de transformer vos idées en solutions digitales concrètes
-            et performantes ? Je réalise des sites, applications web et mobiles, outils métier — du prototype au produit.
-          </p>
+       <p className="max-w-3xl mt-4 text-lg text-slate-600">
+  Vous recherchez un collaborateur capable de transformer vos idées en solutions digitales concrètes et performantes ?
+Que ce soit pour accompagner un petit commerce local ou pour intégrer une équipe dans une entreprise, je m’adapte à vos besoins : CDD, CDI, mission freelance.
+Je réalise des sites web, des applications web et mobiles, ainsi que des outils métier — du prototype au produit final.
+</p>
         </header>
 
         <section className="grid items-start gap-8 md:grid-cols-2">
