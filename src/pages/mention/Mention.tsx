@@ -12,7 +12,7 @@ const MentionsLegales: React.FC = () => {
             Le site <strong>Maximilienrfreelance </strong> est édité par <strong>Maximilien Roussel</strong>,  
             micro-entrepreneur, immatriculé au Répertoire SIRET sous le numéro <strong>[*]</strong>,  
             domicilié à <strong>[France metropolitaine]</strong>.  
-            Contact : <a href="mailto:maximilienrfreelance.com" className="text-blue-600 underline">mfreelance@contact.com</a>
+            Contact : <a href="mailto:maximilienrfreelance@gmail.com" className="text-blue-600 underline">maximilienrfreelance@gmail.com</a>
           </p>
         </section>
 
@@ -55,7 +55,7 @@ const MentionsLegales: React.FC = () => {
           <p className="leading-relaxed text-gray-700">
             Conformément à la réglementation en vigueur, vous disposez d’un droit d’accès, de modification,  
             de rectification et de suppression des données vous concernant.  
-            Pour exercer ce droit, contactez-nous à <a href="mailto:contact@votresite.com" className="text-blue-600 underline">contact@votresite.com</a>.
+            Pour exercer ce droit, contactez-nous <span className="text-blue-600 underline">maximilienr.freelance@gmail.com</span>.
           </p>
         </section>
 
