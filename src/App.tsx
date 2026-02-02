@@ -18,7 +18,7 @@ const router = createBrowserRouter([
       { path: "contact", element: <Contact /> },
       { path: "tarif", element: <Tarif /> },
       { path: "mention", element: <Mention /> },
-      // Catch-all pour toutes les URLs non définies.
+      // Catch-all pour toutes les URLs non définies..
       { path: "*", element: <Page404 /> },
     ],
   },
