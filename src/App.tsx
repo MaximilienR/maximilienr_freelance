@@ -5,7 +5,7 @@ import Home from "./pages/Home/Home";
 import Projet from "./pages/Project/Projet";
 import Contact from "./pages/Contact/Contact";
 import Tarif from "./pages/Tarrif/Tarif";
-import Mention from './pages/Mention/Mention';
+import Mention from './pages/Mention/Mention.tsx';
 import Page404 from "./pages/Error/Error"; // <- vérifie bien la casse
 
 const router = createBrowserRouter([
