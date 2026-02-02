@@ -11,7 +11,7 @@ export default function Mention() {
 
       <p className="mb-4">
         Le présent site est édité par <strong>ROUSSEL Maximilien</strong>,
-        entrepreneur individuel exerçant sous le nom commercial{" "}
+        entrepreneur individuel exerçant sous le nom commercial de {" "}
         <strong>« Maximilienr.Freelance »</strong>, immatriculé au Registre
         national des entreprises (RNE).
       </p>
