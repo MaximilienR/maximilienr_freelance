@@ -5,7 +5,7 @@ import Home from "./pages/Home/Home";
 import Projet from "./pages/Project/Projet";
 import Contact from "./pages/Contact/Contact";
 import Tarif from "./pages/Tarrif/Tarif";
-import Mention from "./pages/foo/Mention";
+import Mention from "./pages/Mention/Mention";
 import Page404 from "./pages/Error/Error";
 
 const router = createBrowserRouter([
