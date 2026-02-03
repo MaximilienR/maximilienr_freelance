@@ -107,7 +107,7 @@ export default function Mention() {
           href="/politique-de-confidentialite"
           className="text-blue-600 underline"
         >
-          Politique de protection des données personnelles.
+          Politique de protection des données personnelles
         </a>
         .
       </p>
