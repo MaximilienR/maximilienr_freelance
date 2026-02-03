@@ -5,8 +5,8 @@ import Home from "./pages/Home/Home";
 import Projet from "./pages/Project/Projet";
 import Contact from "./pages/Contact/Contact";
 import Tarif from "./pages/Tarrif/Tarif";
-import Mention from "./pages/Mention/Mention";
-import Page404 from "./pages/Error/Error"; // <- vérifie bien la casse.
+import Mention from "./pages/mention/Mention";
+import Page404 from "./pages/Error/Error";
 
 const router = createBrowserRouter([
   {
@@ -18,7 +18,6 @@ const router = createBrowserRouter([
       { path: "contact", element: <Contact /> },
       { path: "tarif", element: <Tarif /> },
       { path: "mention", element: <Mention /> },
-      // Catch-all pour toutes les URLs non définies.....
       { path: "*", element: <Page404 /> },
     ],
   },
