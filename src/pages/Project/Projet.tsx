@@ -6,6 +6,7 @@ import anaf from '../../assets/anaf.png';
 import hero from '../../assets/hero.png';
 import elec from '../../assets/electord.png';
 
+
 type Product = {
   id: number;
   name: string;
@@ -58,10 +59,10 @@ function Projet() {
       image: hero,
     },
     {
-      id: 6,
-      name: 'Electrod',
-      description: 'Logiciel de bureau pour la prise de notes et la gestion de fichiers.',
-      technologies: ['HTML', 'CSS', 'JS', 'Electron', 'Node.js'],
+      id: 7,
+      name: 'Tonassistant.fr',
+      description: 'Generateur de devis pour les entrepreneurs, permettant de créer des devis personnalisés en fonction des besoins spécifiques de chaque projet.',
+      technologies: ['HTML', 'CSS', 'JS', 'PHP', 'Symfony', 'MySQL'],
       externalLink: 'https://github.com/MaximilienR/Electrod',
       image: elec,
     },

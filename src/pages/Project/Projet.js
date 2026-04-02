@@ -6,6 +6,7 @@ import cinelounge from '../../assets/cine.png';
 import anaf from '../../assets/anaf.png';
 import hero from '../../assets/hero.png';
 import elec from '../../assets/electord.png';
+import assistant from '../../assets/assistant.png';
 function Projet() {
     const products = [
         {
@@ -55,6 +56,14 @@ function Projet() {
             technologies: ['HTML', 'CSS', 'JS', 'Electron', 'Node.js'],
             externalLink: 'https://github.com/MaximilienR/Electrod',
             image: elec,
+        },
+        {
+            id: 7,
+            name: 'Tonassistant.fr',
+            description: 'Generateur de devis pour les entrepreneurs, permettant de créer des devis personnalisés en fonction des besoins spécifiques de chaque projet.',
+            technologies: ['HTML', 'CSS', 'JS', 'PHP', 'Symfony', 'MySQL'],
+            externalLink: 'https://tonassistant.fr/',
+            image: assistant,
         },
     ];
     const [selectedProduct, setSelectedProduct] = useState(null);
