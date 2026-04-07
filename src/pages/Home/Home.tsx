@@ -48,7 +48,7 @@ Je réalise des sites web, des applications web et mobiles, ainsi que des outils
 
             <div className="flex gap-3 mt-6">
               <a className="inline-block px-4 py-2 font-medium text-white bg-indigo-600 rounded-md shadow hover:bg-indigo-700" href="/contacefezfzezeet">Me contacter</a>
-              <a className="inline-block px-4 py-2 border rounded-md border-slate-200 text-slate-800 hover:bg-slate-50" href="https://drive.google.com/file/d/1B8VPzF-nYrmPbAO0bsunsT52083JZLKm/view?usp=sharing" target="_blank">Voir CV</a>
+              <a className="inline-block px-4 py-2 border rounded-md border-slate-200 text-slate-800 hover:bg-slate-50" href="https://drive.google.com/file/d/1DU4u6z6Q0XI3uDNzZcgNMisjEvU0NcUH/view?usp=sharing" target="_blank">Voir CV</a>
             </div>
           </article>
 
